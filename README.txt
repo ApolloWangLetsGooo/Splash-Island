@@ -60,6 +60,16 @@ SPLASH ISLAND  ·  水花岛
   R 上下朋友的载具   C 鸟形态下降   1–4 换英雄   P 好友和组队   M 声音   H 隐藏操作说明
   手机：左下摇杆（推到底就是疾跑），右边按钮：Attack / Jump / Power / Ride / Down / Help
 
+---------------------------------------------------------
+六、四个英雄
+---------------------------------------------------------
+  AP       回旋太阳飞盘（反手飞盘投掷）。E：太阳车，可以载 3 个朋友。
+  Clark    高尔夫少年。敌人在身边：球杆像剑一样连斩（连按两下是正手+反手）；
+           敌人在远处：侧身站好、完整挥杆把高尔夫球打出去。E：大鸟（不再有体力限制）。
+  TMZ      四分卫。持球夹在臂下，攻击时举球到耳边、单手过肩把螺旋球传出去。E：冲撞。
+  Freddie  锚扛在肩上。敌人在身边：抡锚砸；远处：把锚连着绳子甩出去，勾住怪物拖回来。
+           E：帆船，在水上航行；开上陆地时船底会出现一朵云，船浮在云上照样开。
+
 =========================================================
 ENGLISH
 =========================================================
@@ -79,6 +89,12 @@ Over the internet:
 
 Parties: everyone on the same server/URL shares the public island. NEW PARTY gives you a code;
 friends type it next to JOIN to get your own island (P in game opens the same panel).
+
+Heroes: AP throws a backhand sun disc. Clark is a golf kid: up close his club slashes like a sword
+(attack twice for a forehand + backhand combo), at range he stands side-on and drives a golf ball;
+his bird no longer runs out of stamina. TMZ is a quarterback who throws spiralling passes overhand.
+Freddie carries his anchor on his shoulder: he smashes with it up close, or hurls it on a rope to hook
+monsters and drag them in; his boat sails on water, and on land it floats on a cloud.
 
 ---------------------------------------------------------
 Credits
