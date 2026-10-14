@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* Splash Island game server — no dependencies, just Node.js (v18 or newer).
-   - Serves the game (index.html in this folder).
+   - Serves the game (index.html in this folder), pre-compressed with gzip and revalidated with ETag
+     so repeat loads are near-instant.
    - Relays multiplayer over WebSocket: everyone on this server shares the public island ("lobby"),
      and a party code gives a group its own island.
    Run:  node server.js            (port 8080)
@@ -11,24 +12,59 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const os = require('os');
+const zlib = require('zlib');
 
 const PORT = +process.env.PORT || 8080;
 const ROOT = __dirname;
 const MAX_MSG = 16 * 1024, MAX_PER_ROOM = 24, MAX_CLIENTS = 400;
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain; charset=utf-8', '.glb': 'model/gltf-binary' };
+const ZIP_TYPES = new Set(['.html', '.js', '.css', '.json', '.txt', '.svg', '.ico']);
+const GZIP_LEVEL = Math.min(9, Math.max(1, +process.env.GZIP_LEVEL || 6));
 
-/* ---------- static files ---------- */
+/* ---------- static files: one in-memory gzip copy per file, revalidated by ETag ---------- */
+const cache = new Map(); // file -> { raw, gz, etag, mtime, size }
+function loadEntry(file) {
+  const st = fs.statSync(file);
+  const raw = fs.readFileSync(file);
+  const etag = '"' + crypto.createHash('sha1').update(raw).digest('hex').slice(0, 24) + '"';
+  let gz = null;
+  if (ZIP_TYPES.has(path.extname(file).toLowerCase()) && raw.length > 1024) {
+    try { gz = zlib.gzipSync(raw, { level: GZIP_LEVEL }); } catch (e) { gz = null; }
+  }
+  return { raw, gz, etag, mtime: +st.mtimeMs, size: raw.length };
+}
+function entryFor(file) {
+  let e = cache.get(file);
+  try {
+    const st = fs.statSync(file);
+    if (!e || e.mtime !== +st.mtimeMs || e.size !== st.size) { e = loadEntry(file); cache.set(file, e); }
+    return e;
+  } catch (err) { cache.delete(file); return null; }
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://x');
   if (url.pathname.endsWith('/__splash')) { res.writeHead(200, { 'content-type': 'application/json', 'cache-control': 'no-store' }); res.end(JSON.stringify({ splash: 1, players: clients.size })); return; }
   let p = decodeURIComponent(url.pathname); if (p.endsWith('/')) p += 'index.html';
   const file = path.normalize(path.join(ROOT, p));
   if (!file.startsWith(ROOT + path.sep) || path.basename(file) === 'server.js') { res.writeHead(403); res.end(); return; }
-  fs.stat(file, (err, st) => {
-    if (err || !st.isFile()) { res.writeHead(404, { 'content-type': 'text/plain' }); res.end('Not found'); return; }
-    res.writeHead(200, { 'content-type': TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream', 'cache-control': 'no-cache' });
-    fs.createReadStream(file).pipe(res);
-  });
+  const e = entryFor(file);
+  if (!e) { res.writeHead(404, { 'content-type': 'text/plain; charset=utf-8' }); res.end('Not found'); return; }
+  const headers = {
+    'content-type': TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream',
+    'cache-control': 'public, max-age=0, must-revalidate',
+    'etag': e.etag,
+    'vary': 'Accept-Encoding',
+    'last-modified': new Date(e.mtime).toUTCString()
+  };
+  if (req.headers['if-none-match'] === e.etag) { res.writeHead(304, headers); res.end(); return; }
+  const wantsGzip = /\bgzip\b/.test(String(req.headers['accept-encoding'] || ''));
+  const body = (wantsGzip && e.gz) ? e.gz : e.raw;
+  if (wantsGzip && e.gz) headers['content-encoding'] = 'gzip';
+  headers['content-length'] = body.length;
+  res.writeHead(200, headers);
+  if (req.method === 'HEAD') { res.end(); return; }
+  res.end(body);
 });
 
 /* ---------- a tiny WebSocket implementation (RFC 6455: text frames, ping/pong, close) ---------- */
@@ -93,4 +129,12 @@ server.listen(PORT, () => {
   console.log('  On this computer:      http://localhost:' + PORT);
   for (const ip of ips) console.log('  Friends on your Wi-Fi: http://' + ip + ':' + PORT);
   console.log('\n  Keep this window open while you play. Press Ctrl+C to stop.\n');
+  // warm the gzip cache in the background right after boot so the first player never waits for it
+  setImmediate(() => {
+    const t0 = Date.now();
+    try {
+      const e = entryFor(path.join(ROOT, 'index.html'));
+      if (e && e.gz) console.log('  gzip ready: index.html ' + e.size + ' -> ' + e.gz.length + ' bytes in ' + (Date.now() - t0) + 'ms\n');
+    } catch (err) { /* nothing to warm */ }
+  });
 });

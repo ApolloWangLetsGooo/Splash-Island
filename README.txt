@@ -57,7 +57,7 @@ SPLASH ISLAND  ·  水花岛
   WASD 移动    鼠标 看四周（点一下画面锁定鼠标，Esc 释放）   滚轮 远近
   Shift 疾跑（耗体力）   空格 跳；空中再按一次开滑翔伞
   鼠标左键 / J 攻击（自动转向最近的敌人）   E 英雄能力
-  R 上下朋友的载具   C 直升机下降   1–6 换英雄   M 地图   P 好友和组队   N 声音   H 隐藏操作说明
+  R 上下朋友的载具   C 直升机下降   1–6 换英雄   M 地图   F 拉杆   Enter 聊天   P 好友和组队   N 声音   H 隐藏操作说明
   手机：左下摇杆（推到底就是疾跑），右边按钮：Attack / Jump / Power / Ride / Down / Help
 
 ---------------------------------------------------------
@@ -77,8 +77,38 @@ SPLASH ISLAND  ·  水花岛
 ---------------------------------------------------------
 七、地图和锚点
 ---------------------------------------------------------
-  按 M（手机点 MAP）打开大地图。岛上有 6 块锚点石碑，走到旁边就解锁（营地的一开始就解锁）。
-  在地图上点金色的锚就能传送过去。紫色的雾表示还没净化的区域。
+  按 M（手机点 MAP）打开大地图，滚轮或双指缩放、拖动移动。
+  岛上有锚点石碑，走到旁边就解锁；在地图上点金色的锚就能传送过去。
+
+---------------------------------------------------------
+八、对战岛（Battle Isle）
+---------------------------------------------------------
+  第一座岛东边海岸、桥头附近有一根古老的拉杆。走过去按 F（手机点 RIDE）拉下它，
+  会播放一段航拍：一座比第一座岛还大的新岛从海里升起来，桥也一起浮出水面。
+  只要有一个朋友拉过拉杆，大家进游戏时岛都会升起来。
+  岛上有：英雄雕像大道、古罗马式斗兽场、废墟、灯塔、营地、训练木桩。
+  斗兽场里玩家之间可以互相攻击，右上角有 KO 计分板；被打倒会在斗兽场门口复活。
+  斗兽场里有观众（打中人、KO 时会欢呼跳起来）、贵宾包厢、遮阳帆、铁闸门、武器架和金色奖杯。
+  岛的东边是一片沙漠，被一道巨大的沙丘挡着，沙丘顶上有被封印的古门和风沙；能爬上去看到沙漠，但还过不去（以后开放）。
+
+  泰坦之穴（团队 Boss）：新岛东北山坡上有一个发光的山洞口（牌子写着 TITAN'S HOLLOW），走进去就到地下大厅。
+  沙之泰坦血量随人数增加，会砸地（看到红圈快跑）、放沙浪（跳起来躲过）、召唤小怪。
+  只有一个人时它的沙之护甲会挡掉大部分伤害，需要两人以上一起打。打败后 10 分钟后复活，参战的人都有奖励。
+  从大厅南边的蓝色光环出去。
+
+  另外：第一座岛的怪物被清掉后，5 分钟内不会再刷新。
+
+---------------------------------------------------------
+九、聊天
+---------------------------------------------------------
+  按 Enter 或 T（手机点 CHAT）打开聊天框，可以打字，也可以点快捷短语。
+  消息会出现在左下角，并在你角色头顶冒泡。
+
+---------------------------------------------------------
+十、Freddie 的船
+---------------------------------------------------------
+  在陆地上是浮在云上的小帆船；一开进水里就变成黑帆海盗大帆船，能载 7 人，
+  点攻击会朝最近的怪物打一轮舷炮。
 
 =========================================================
 ENGLISH
@@ -103,7 +133,11 @@ friends type it next to JOIN to get your own island (P in game opens the same pa
 Heroes (1-6): AP (sun disc, Sun Car), Clark (golf club; private helicopter with a chin gun), TMZ (quarterback;
 Team Bus for 7 friends, sprint + attack to tackle), Freddie (anchor on a rope; boat that floats on a cloud over land),
 Xiaogang (buzz-cut fencer: lunges in; E = fleche dash), Tim (bard: staff shockwave "bro like"; E = healing song).
-Map: press M. Walk up to an anchor stone to unlock it, then click a gold anchor on the map to travel there. Sound is now N.
+Map: press M (scroll/pinch to zoom). Walk up to an anchor stone to unlock it, then click a gold anchor to travel. Sound is N.
+Battle Isle: pull the old lever on the east shore (F) to raise a new, bigger island from the sea. Its colosseum is a
+PvP arena with a cheering crowd and KO scoreboard; the desert beyond the great dune is sealed for now. Chat: Enter or T.
+Titan's Hollow: a cave on the Battle Isle hills leads to the Sand Titan raid boss (needs 2+ players). Monsters stay dead for 5 minutes.
+Freddie's boat becomes a black-sailed galleon on open water (7 seats, broadside cannons).
 
 ---------------------------------------------------------
 Credits
