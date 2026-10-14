@@ -57,18 +57,28 @@ SPLASH ISLAND  ·  水花岛
   WASD 移动    鼠标 看四周（点一下画面锁定鼠标，Esc 释放）   滚轮 远近
   Shift 疾跑（耗体力）   空格 跳；空中再按一次开滑翔伞
   鼠标左键 / J 攻击（自动转向最近的敌人）   E 英雄能力
-  R 上下朋友的载具   C 鸟形态下降   1–4 换英雄   P 好友和组队   M 声音   H 隐藏操作说明
+  R 上下朋友的载具   C 直升机下降   1–6 换英雄   M 地图   P 好友和组队   N 声音   H 隐藏操作说明
   手机：左下摇杆（推到底就是疾跑），右边按钮：Attack / Jump / Power / Ride / Down / Help
 
 ---------------------------------------------------------
-六、四个英雄
+六、六个英雄（按 1–6 切换）
 ---------------------------------------------------------
-  AP       回旋太阳飞盘（反手飞盘投掷）。E：太阳车，可以载 3 个朋友。
-  Clark    高尔夫少年。敌人在身边：球杆像剑一样连斩（连按两下是正手+反手）；
-           敌人在远处：侧身站好、完整挥杆把高尔夫球打出去。E：大鸟（不再有体力限制）。
-  TMZ      四分卫。持球夹在臂下，攻击时举球到耳边、单手过肩把螺旋球传出去。E：冲撞。
-  Freddie  锚扛在肩上。敌人在身边：抡锚砸；远处：把锚连着绳子甩出去，勾住怪物拖回来。
-           E：帆船，在水上航行；开上陆地时船底会出现一朵云，船浮在云上照样开。
+  AP       回旋太阳飞盘。E：太阳车，载 3 个朋友。
+  Clark    高尔夫少年。近身：球杆像剑一样连斩；远处：侧身挥杆把球打出去。
+           E：私人直升机（载 3 人），机头有机枪，点攻击就扫射。
+  TMZ      四分卫，单手过肩传球；冲刺时按攻击 = 冲撞。
+           E：球队大巴，载 7 个朋友（车里 3 个、车顶 4 个），能把怪物撞飞、撞开裂石门。
+  Freddie  锚扛在肩上。近身抡锚；远处把锚甩出去勾住怪物拖回来。
+           E：帆船，水上航行，上了陆地就浮在一朵云上继续开。
+  小刚      寸头击剑手。攻击会冲刺弓步刺过去，连按是刺+挑；E：快攻冲刺，一路刺穿一排怪物。
+  Tim      吟游诗人。敲法杖在地上放出冲击波，头顶会弹出 "bro like"；
+           E：唱歌，附近所有朋友（包括自己）回血并且攻击力提升 8 秒。
+
+---------------------------------------------------------
+七、地图和锚点
+---------------------------------------------------------
+  按 M（手机点 MAP）打开大地图。岛上有 6 块锚点石碑，走到旁边就解锁（营地的一开始就解锁）。
+  在地图上点金色的锚就能传送过去。紫色的雾表示还没净化的区域。
 
 =========================================================
 ENGLISH
@@ -90,11 +100,10 @@ Over the internet:
 Parties: everyone on the same server/URL shares the public island. NEW PARTY gives you a code;
 friends type it next to JOIN to get your own island (P in game opens the same panel).
 
-Heroes: AP throws a backhand sun disc. Clark is a golf kid: up close his club slashes like a sword
-(attack twice for a forehand + backhand combo), at range he stands side-on and drives a golf ball;
-his bird no longer runs out of stamina. TMZ is a quarterback who throws spiralling passes overhand.
-Freddie carries his anchor on his shoulder: he smashes with it up close, or hurls it on a rope to hook
-monsters and drag them in; his boat sails on water, and on land it floats on a cloud.
+Heroes (1-6): AP (sun disc, Sun Car), Clark (golf club; private helicopter with a chin gun), TMZ (quarterback;
+Team Bus for 7 friends, sprint + attack to tackle), Freddie (anchor on a rope; boat that floats on a cloud over land),
+Xiaogang (buzz-cut fencer: lunges in; E = fleche dash), Tim (bard: staff shockwave "bro like"; E = healing song).
+Map: press M. Walk up to an anchor stone to unlock it, then click a gold anchor on the map to travel there. Sound is now N.
 
 ---------------------------------------------------------
 Credits
