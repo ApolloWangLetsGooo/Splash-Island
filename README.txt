@@ -89,7 +89,21 @@ SPLASH ISLAND  ·  水花岛
   岛上有：英雄雕像大道、古罗马式斗兽场、废墟、灯塔、营地、训练木桩。
   斗兽场里玩家之间可以互相攻击，右上角有 KO 计分板；被打倒会在斗兽场门口复活。
   斗兽场里有观众（打中人、KO 时会欢呼跳起来）、贵宾包厢、遮阳帆、铁闸门、武器架和金色奖杯。
-  岛的东边是一片沙漠，被一道巨大的沙丘挡着，沙丘顶上有被封印的古门和风沙；能爬上去看到沙漠，但还过不去（以后开放）。
+  岛的东边是灼日沙漠（Sunscorch Desert）。原来挡路的大沙丘中间被冲开了一个缺口，古门塌了一半，从缺口就能走进沙漠。
+
+九、大金字塔副本（The Great Pyramid）
+---------------------------------------------------------
+  从沙丘缺口一直往东走，石板大道两边有狮子石像、火盆和方尖碑，尽头就是大金字塔（高约 95 米）。
+  走进正面那扇发着橙光的圆形铜门就进入副本。里面有三层：
+    第一层 Hall of the Restless：木乃伊和墓穴守卫。全部清掉，北边的石闸门才会落下，走上去到下一层。
+    第二层 Gallery of Scarabs：圣甲虫（跑得很快）、守卫，还有会远程扔绿色光球的沙之祭司。
+    第三层 Throne of the Sun King：太阳王 Boss，需要两人以上（一个人打时他的金色护盾会挡掉大部分伤害，血量也随人数增加）。
+      他会：举杖砸地（看到红圈快跑）、放出 6 股沙龙卷（不停移动）、钻进沙里从你脚下冒出来（盯着沙尘痕迹）、召唤守卫。
+  打倒太阳王后，王座后面的金色电梯门会打开。按 F 坐电梯，电梯会把你送到金字塔顶，有一段航拍镜头看整个沙漠和对战岛。
+  在塔顶可以跳下去用滑翔伞飞下来，或者站在电梯上按 F 坐回大门口。
+  副本可以反复刷：所有人离开金字塔约 20 秒后，三层的怪物和太阳王全部重置。每次通关都有奖励（材料 + 经验），并记录通关次数和用时。
+  在副本里死了会在这一层的门口复活。副本里不能召唤载具。
+  地图上新增锚点：The Breach（沙丘缺口）、Pyramid Gate（金字塔大道）、Pyramid Summit（塔顶，到过一次就能直接传送）。
 
   泰坦之穴（团队 Boss）：新岛东北山坡上有一个发光的山洞口（牌子写着 TITAN'S HOLLOW），走进去就到地下大厅。
   沙之泰坦血量随人数增加，会砸地（看到红圈快跑）、放沙浪（跳起来躲过）、召唤小怪。
@@ -135,7 +149,10 @@ Team Bus for 7 friends, sprint + attack to tackle), Freddie (anchor on a rope; b
 Xiaogang (buzz-cut fencer: lunges in; E = fleche dash), Tim (bard: staff shockwave "bro like"; E = healing song).
 Map: press M (scroll/pinch to zoom). Walk up to an anchor stone to unlock it, then click a gold anchor to travel. Sound is N.
 Battle Isle: pull the old lever on the east shore (F) to raise a new, bigger island from the sea. Its colosseum is a
-PvP arena with a cheering crowd and KO scoreboard; the desert beyond the great dune is sealed for now. Chat: Enter or T.
+PvP arena with a cheering crowd and KO scoreboard. Chat: Enter or T.
+Sunscorch Desert: walk through the breach in the great dune. The Great Pyramid is a repeatable 3-level dungeon: clear each
+hall to open the stair, beat the Sun King (2+ players) on level 3, then ride the lift (F) to the summit. It resets ~20 s after
+everyone has left. Dying inside respawns you at that level's door.
 Titan's Hollow: a cave on the Battle Isle hills leads to the Sand Titan raid boss (needs 2+ players). Monsters stay dead for 5 minutes.
 Freddie's boat becomes a black-sailed galleon on open water (7 seats, broadside cannons).
 
